@@ -2,6 +2,7 @@
 # Run from repository root: Rscript R/reconcile_raw_oews.R /path/to/BLS/archives
 # Requires R package readxl. Official archives: oesm21all.zip ... oesm25all.zip.
 # This script does NOT verify county membership or AI benchmark provenance.
+source("R/source_archive_helpers.R")
 args <- commandArgs(trailingOnly=TRUE)
 if (length(args)!=1L) stop("Usage: Rscript R/reconcile_raw_oews.R <directory-with-oesm21all.zip-through-oesm25all.zip>")
 rawdir <- args[1]
@@ -23,13 +24,12 @@ for (i in seq_along(2021:2025)) {
  year <- (2021:2025)[i]
  yy <- substr(as.character(year),3,4)
  archive <- file.path(rawdir,paste0("oesm",yy,"all.zip"))
- internal <- paste0("oesm",yy,"all/all_data_M_",year,".xlsx")
+ internal <- find_zip_member(archive,paste0("all_data_M_",year,".xlsx"))
  if (!file.exists(archive)) stop("Missing BLS archive: ",archive)
  td <- tempfile(paste0("oews_",year,"_"));dir.create(td)
  tryCatch({
-  extracted <- utils::unzip(archive,files=internal,exdir=td)
-  if(length(extracted)!=1L || !file.exists(extracted[1])) stop("Cannot extract ",internal)
-  raw <- readxl::read_excel(extracted[1],col_types="text",.name_repair="minimal")
+  source_path <- extract_zip_member(archive,internal,td)
+  raw <- readxl::read_excel(source_path,col_types="text",.name_repair="minimal")
   names(raw) <- trimws(names(raw))
   required <- c("AREA","OCC_CODE","NAICS","OWN_CODE","TOT_EMP","A_MEAN")
   if(!all(required %in% names(raw))) stop("Missing OEWS source fields in year ",year)
