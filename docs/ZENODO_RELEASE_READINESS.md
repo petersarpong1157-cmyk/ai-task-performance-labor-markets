@@ -9,7 +9,8 @@
 
 ## Prepublication gates
 
-- Verify the raw BLS 2021–2025 extraction and document the results of an independent clean source run.
+- [x] Verify the raw BLS 2021–2025 occupation-year numerical reconciliation using the researcher's RStudio execution and retain the [50-row comparison](../results/raw_bls_reconciliation.csv) (50/50 employment and 50/50 wage matches, zero discrepancies).
+- [ ] Obtain a separate **independent** clean-environment source replication if making an independent-replication claim.
 - Check all final reference records, figures and methods on the manuscript.
 - Resolve authorship and any coauthor approvals, affiliations, conflicts, funding, AI declaration and the distribution license; the repository currently lacks a chosen `LICENSE`.
 - If needed, restrict or embargo materials that should not be public; do not publish synthetic reference keys, personal files or hidden evaluation datasets.
@@ -17,7 +18,7 @@
 
 ## Archived provenance at present
 
-- The original BLS archives exist in the research working folder, but **presence is not proof of raw numerical reproduction**.
+- The original BLS archives were read by the researcher's local RStudio reconciliation script: the submitted log reported five years read, 50/50 employment matches, 50/50 wage matches, and exit status 0. The [detailed researcher-uploaded CSV](../results/raw_bls_reconciliation.csv) was independently inspected for numerical agreement and committed. This is researcher-executed source reconciliation, not external independent replication.
 - Three O*NET 31.0 source task records directly matched the workbook, but these are **not three validated task mappings**.
 - GitHub Actions run 39034621104 passed the processed-data R calculation and generated SVG/PDF outputs; raw-source steps are not part of that run.
 - The preliminary bundle contains a checksum manifest; verify it after extraction.
