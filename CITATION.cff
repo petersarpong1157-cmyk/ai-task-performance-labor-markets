@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, cite the versioned archival release when a DOI becomes available."
+type: software
+title: "AI Task Performance and Occupational Labor Markets: Descriptive Reproducibility Materials"
+authors:
+  - family-names: Sarpong
+    given-names: Peter
+    orcid: "https://orcid.org/0009-0000-0871-8285"
+repository-code: "https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets"
+abstract: >-
+  Working R scripts, processed occupational data, source-audit notes and
+  illustrative figures for descriptive U.S. metropolitan OEWS 2021-2025
+  comparisons alongside separately bounded saved synthetic AI benchmark
+  evidence. This archive does not establish AI causality or full occupational
+  task validation. A Zenodo DOI has not yet been assigned.
+keywords:
+  - occupational employment
+  - real wages
+  - OEWS
+  - O*NET
+  - reproducibility
+license: "NOASSERTION"
