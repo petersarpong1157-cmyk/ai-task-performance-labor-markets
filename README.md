@@ -60,3 +60,9 @@ BLS CPI: https://www.bls.gov/cpi/
 O*NET: https://www.onetcenter.org/database.html
 
 **Status:** working research documentation; not submission-ready.
+
+## Manuscript evidence and generated figures
+
+For the structured figure-and-table source map, precise descriptive captions, required disclosures, and outstanding audit work, see [Manuscript Evidence Package](docs/MANUSCRIPT_EVIDENCE_PACKAGE.md).
+
+The [successful R workflow](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104) generates a primary publication figure (SVG and PDF) and an occupational results CSV as a downloadable **GitHub Actions artifact**. This generated output is not automatically committed into the repository tree. Raw BLS and O*NET archive execution remains pending.
