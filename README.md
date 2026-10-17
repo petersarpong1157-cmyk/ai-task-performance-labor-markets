@@ -66,3 +66,7 @@ O*NET: https://www.onetcenter.org/database.html
 For the structured figure-and-table source map, precise descriptive captions, required disclosures, and outstanding audit work, see [Manuscript Evidence Package](docs/MANUSCRIPT_EVIDENCE_PACKAGE.md).
 
 The [successful R workflow](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104) generates a primary publication figure (SVG and PDF) and an occupational results CSV as a downloadable **GitHub Actions artifact**. This generated output is not automatically committed into the repository tree. Raw BLS and O*NET archive execution remains pending.
+
+## Working manuscript draft
+
+Read [the full working manuscript](manuscript/WORKING_MANUSCRIPT.md), including the abstract, methods, primary results table, sensitivity analysis, limitations, and author-confirmation items. This is **not yet a journal-ready submission**: original-source executions, bibliography verification, and final author declarations are outstanding.
