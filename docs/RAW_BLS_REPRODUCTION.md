@@ -18,8 +18,8 @@ The exact original 212 metropolitan IDs are now committed as `data/processed/pha
 
 ## Verification scope
 
-- **Not yet run in a fresh R environment against raw archived BLS workbooks.** GitHub Actions currently tests only the processed-data reconstruction; do not confuse those separate workflows.
-- The previous local researcher workflow reported successful original BLS reconciliation, but it is not an independent external rerun.
+- **PASSED in the researcher's local RStudio session on 17 October 2026:** The original 2021–2025 archived workbooks were reconciled, with **50/50 employment and 50/50 weighted-wage occupation-year matches** and exit status 0. [The complete 50-row CSV](../results/raw_bls_reconciliation.csv) and [execution documentation](RAW_BLS_VERIFICATION_RESULT.md) are committed. GitHub Actions separately tests the processed-data reconstruction; it does **not** run the raw archives.
+- This is a successful author-run source reconciliation, **not an independent external rerun**.
 - Does not independently recreate the 282 stable county-membership metro selection, verify six remaining full occupational definitions, or identify AI causal effects.
 - Requires archive downloading and sufficient local RAM/disk. No private accounting/HR/market-research reference answers are necessary.
 
