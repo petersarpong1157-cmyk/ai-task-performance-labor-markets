@@ -23,6 +23,8 @@ jobs:
         with:
           r-version: 'release'
           use-public-rspm: false
+      - name: Parse all maintained R scripts
+        run: Rscript R/test_script_syntax.R
       - name: Validate source archive helpers
         run: Rscript R/test_source_archive_helpers.R
       - name: Reproduce processed-data results
