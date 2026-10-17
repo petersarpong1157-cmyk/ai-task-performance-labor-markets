@@ -1,0 +1,8 @@
+check,passed
+Ten occupations evaluated,TRUE
+All primary estimates reproduced,TRUE
+All primary samples contain 212 metros,TRUE
+Expanded sample is never smaller,TRUE
+Expanded samples do not exceed 282 metros,TRUE
+All expanded endpoint observations complete,TRUE
+Finite employment and real-wage changes,TRUE
