@@ -1,7 +1,8 @@
 # Saved AI Benchmark Calculations, O*NET Task-Statement Overlap, and U.S. Metropolitan Occupational Employment and Wages: Three Distinct Evidence Streams
 
-**Working manuscript — 17 October 2026**  
-**Author:** Peter Sarpong (independent researcher)  
+**Working manuscript — revised 17 October 2026**  
+**Author:** Peter Sarpong (Independent Researcher, Gaithersburg, Maryland, USA)  
+**Correspondence:** peter.sarpong1157@gmail.com  
 **Status:** Research draft, not peer reviewed. Source-level reproduction and literature verification remain incomplete.
 
 ## Abstract
@@ -116,12 +117,14 @@ Preserved synthetic outputs exhibited complete numerical agreement with the avai
 
 **Data sources:** U.S. Bureau of Labor Statistics, Occupational Employment and Wage Statistics May 2021–2025 original annual release tables; U.S. Bureau of Labor Statistics, annual-average CPI-U; O*NET Database 31.0, task statements; researcher-constructed synthetic benchmarks and preserved response audit records. Bibliographic detail, access dates and exact publication URLs require checking before journal submission.
 
-**Code and processed outputs:** [GitHub repository](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets). The processed-data R reconstruction and automatically generated main figure passed GitHub Actions. Raw BLS and O*NET source verification scripts are available but their new clean-environment executions **remain pending**.
+**Code and processed outputs:** [GitHub repository](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets). The processed-data R reconstruction and automatically generated main figure passed GitHub Actions. The author executed the raw BLS source reconciliation in RStudio (2021–2025): **50/50 employment** and **50/50 employment-weighted wage aggregates matched**; the detailed [50-row comparison](../results/raw_bls_reconciliation.csv) is public. Three original O*NET task statement records were verified directly against the source workbook; this is not independent validation of the candidate task mappings. The Zenodo archival release is [v3.4.7 (DOI: 10.5281/zenodo.23437477)](https://doi.org/10.5281/zenodo.23437477), which represents a fixed historical snapshot.
 
 **Ethics:** The labor analysis uses aggregated, published occupational estimates; the synthetic benchmarks use constructed records. No human-subject recruitment is documented in the research records summarized here. Formal journal ethics declarations must be checked against the completed project.
 
-**Funding and conflicts:** Not documented in the reviewed materials; author confirmation required before journal submission.
+**Funding:** This research received no external funding.  
+**Competing interests:** The author declares no known financial or non-financial competing interests.  
+**Author contribution:** Peter Sarpong is the sole author and is responsible for research decisions, data analysis, interpretation, review and final approval.
 
-**Generative AI-use declaration — author review required:** The author has used ChatGPT to assist with research workflow organization, R coding and debugging, numerical checking, figure generation, manuscript drafting and editing, and GitHub documentation. The author remains responsible for verifying data, references, interpretations and all submitted materials. This statement should be confirmed and revised by the author to accurately reflect the complete workflow.
+**Generative AI use:** During preparation of this manuscript, OpenAI ChatGPT was used to support research planning, R code development and debugging, numerical verification, literature searches, manuscript drafting and language editing, and preparation of reproducibility documentation. The author was responsible for research decisions, data analysis, interpretation of findings, verification of results and final review. All conclusions and research content remain the author's responsibility.
 
 **References:** The source institutions above are known from supplied files. A fully verified scholarly literature review and formatted reference list are **not yet included**; references must not be invented.
