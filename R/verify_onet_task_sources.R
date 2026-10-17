@@ -2,18 +2,16 @@
 # Usage from repository root:
 #   Rscript R/verify_onet_task_sources.R "/path/to/db_31_0_excel.zip"
 # Requires readxl. This tests source identity ONLY, not AI task competence.
+source("R/source_archive_helpers.R")
 args <- commandArgs(trailingOnly = TRUE)
 if(length(args) != 1L) stop("Usage: Rscript R/verify_onet_task_sources.R <db_31_0_excel.zip>")
 if (!file.exists(args[1])) stop("Cannot find O*NET archive")
 if (!requireNamespace("readxl", quietly=TRUE)) stop("Please install readxl")
-member <- "db_31_0_excel/Task Statements.xlsx"
-entries <- utils::unzip(args[1], list=TRUE)$Name
-if (!(member %in% entries)) stop("O*NET Task Statements.xlsx missing from ZIP")
+member <- find_zip_member(args[1], "Task Statements.xlsx")
 tmp <- tempfile("onet31_")
 dir.create(tmp)
-paths <- utils::unzip(args[1], files=member, exdir=tmp)
-if(length(paths)!=1L || !file.exists(paths[1])) stop("Extraction failed")
-source <- readxl::read_excel(paths[1],col_types="text")
+source_path <- extract_zip_member(args[1],member,tmp)
+source <- readxl::read_excel(source_path,col_types="text")
 names(source) <- trimws(names(source))
 req <- c("O*NET-SOC Code","Task ID","Task","Task Type","Date","Domain Source")
 if (!all(req %in% names(source))) stop("O*NET source columns missing")
