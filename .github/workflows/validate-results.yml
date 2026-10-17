@@ -29,6 +29,8 @@ jobs:
         run: Rscript R/test_source_archive_helpers.R
       - name: Reproduce processed-data results
         run: Rscript R/reproduce_descriptive_results.R
+      - name: Render primary research figure
+        run: Rscript R/create_primary_figures.R
       - name: Show output
         run: |
           test -f results/reproduced/checked_occupational_results.csv
@@ -37,4 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: occupational-reconstruction
-          path: results/reproduced/checked_occupational_results.csv
+          path: |
+            results/reproduced/checked_occupational_results.csv
+            figures/generated/primary_employment_real_wage.svg
+            figures/generated/primary_employment_real_wage.pdf
