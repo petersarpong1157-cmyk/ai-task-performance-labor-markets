@@ -19,6 +19,6 @@ The script extracts the Task Statements workbook to a temporary directory and ch
 
 **This is a source identity check only.** It does not establish that an occupational expert reviewed the researcher's proposed mapping, nor does it validate full-task AI performance.
 
-**Execution status:** Script is published and fetch-verified, but has **not been run** on the O*NET archive in a clean environment by GitHub Actions because that original ZIP is not in this repository.
+**Verification status:** Three O*NET 31.0 task statements have been directly matched to the original workbook using Python, with the [source comparison](../results/onet31_original_source_verification.csv) and [audit](ONET_DIRECT_SOURCE_VERIFICATION.md) committed. The separate R script remains available but has not been run in GitHub Actions against the archive. Neither verification independently validates the proposed AI activity mappings.
 
 Raw archives and private benchmark references are excluded by `.gitignore`. Never publish a hidden private reference merely because a filename is not covered by an ignore rule.
