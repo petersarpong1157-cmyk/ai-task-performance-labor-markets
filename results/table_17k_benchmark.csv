@@ -1,0 +1,3 @@
+benchmark_group,saved_cases,matching_saved_cases,correct_fields,evaluated_fields,recorded_case_match_pct,recorded_field_match_pct
+Earlier accounting benchmark,20,20,110,110,100,100
+New HR and market research pilot,6,6,30,30,100,100
