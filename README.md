@@ -27,27 +27,23 @@ The occupational analysis used BLS Occupational Employment and Wage Statistics (
 - The use of O*NET 31.0 task descriptions (2026) alongside OEWS data (2021–2025) is retrospective.
 - Differences in OEWS methodology and metropolitan delineations, and missing observations, remain relevant limitations.
 
-## Repository status
+## Repository status and reproducibility
 
-This public repository currently contains research documentation. **The complete R scripts, underlying data, response files, validated analytical CSV outputs, and formatted manuscript are not yet committed here.** Do not interpret this repository as a fully runnable reproduction package until those materials are reviewed and uploaded.
+This repository contains maintained R scripts, processed OEWS results, original-source verification records, research figures, an evidence-bounded working manuscript, and supporting documentation. It is a **versioned descriptive research archive**, not a peer-reviewed paper or an independently validated AI-automation study.
 
-- [Evidence and limitations](docs/EVIDENCE_AND_LIMITATIONS.md)
-- [Reproducibility plan](docs/REPRODUCIBILITY.md)
-- [Source and citation register](docs/SOURCES.md)
+- [Processed-data reconstruction](R/reproduce_descriptive_results.R) and [figure generator](R/create_primary_figures.R) passed [GitHub Actions validation](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104).
+- The author ran [raw BLS reconciliation](docs/RAW_BLS_VERIFICATION_RESULT.md) against the five original 2021–2025 OEWS ZIP archives: **50/50 employment and 50/50 employment-weighted mean-wage aggregates matched**, with exit status 0. See [the full comparison CSV](results/raw_bls_reconciliation.csv). This is researcher-executed verification, not external independent replication.
+- [Three original O*NET 31.0 task statements](docs/ONET_DIRECT_SOURCE_VERIFICATION.md) were verified against the archived source workbook. Their proposed AI benchmark mappings remain candidate partial-activity links; **zero full occupational tasks** have been validated.
+- [Research evidence and limitations](docs/EVIDENCE_AND_LIMITATIONS.md), [reproducibility documentation](docs/REPRODUCIBILITY.md), and [source records](docs/SOURCES.md) describe the remaining boundaries.
 
-## Proposed layout
+## Published archival release
 
-```text
-README.md
-docs/
-  EVIDENCE_AND_LIMITATIONS.md
-  REPRODUCIBILITY.md
-  SOURCES.md
-R/            # to be added after exact scripts are supplied and checked
-results/      # to be added after outputs are supplied and checked
-figures/      # to be added after figures are supplied and checked
-manuscript/   # to be added after explicit review for public release
-```
+**Version:** `v3.4.7`  
+**Zenodo DOI:** [10.5281/zenodo.23437477](https://doi.org/10.5281/zenodo.23437477)  
+**Author:** Peter Sarpong, Independent Researcher, Gaithersburg, Maryland, USA  
+**Correspondence:** peter.sarpong1157@gmail.com
+
+The DOI identifies the published **v3.4.7 snapshot**, not later changes to the GitHub `main` branch. Subsequent updates require a separately versioned release if they are to be archived and cited on Zenodo.
 
 ## Research integrity and AI assistance
 
@@ -59,14 +55,14 @@ BLS OEWS: https://www.bls.gov/oes/
 BLS CPI: https://www.bls.gov/cpi/  
 O*NET: https://www.onetcenter.org/database.html
 
-**Status:** working research documentation; not submission-ready.
+**Status:** Public versioned research materials and a working manuscript are available. Journal submission remains subject to final editorial/reference review and journal requirements; the Zenodo archive is not evidence of peer review.
 
 ## Manuscript evidence and generated figures
 
 For the structured figure-and-table source map, precise descriptive captions, required disclosures, and outstanding audit work, see [Manuscript Evidence Package](docs/MANUSCRIPT_EVIDENCE_PACKAGE.md).
 
-The [successful R workflow](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104) generates a primary publication figure (SVG and PDF) and an occupational results CSV as a downloadable **GitHub Actions artifact**. This generated output is not automatically committed into the repository tree. Raw BLS and O*NET archive execution remains pending.
+The [successful R workflow](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104) generates a primary publication figure (SVG and PDF) and an occupational results CSV as a downloadable **GitHub Actions artifact**. This generated output is not automatically committed into the repository tree. Raw BLS source reconciliation has passed in the author's RStudio run (50/50 employment and 50/50 wage aggregates), with [detailed CSV evidence](results/raw_bls_reconciliation.csv). Three original O*NET source statements were also checked directly; the candidate task mappings have not been independently validated.
 
 ## Working manuscript draft
 
-Read [the full working manuscript](manuscript/WORKING_MANUSCRIPT.md), including the abstract, methods, primary results table, sensitivity analysis, limitations, and author-confirmation items. This is **not yet a journal-ready submission**: original-source executions, bibliography verification, and final author declarations are outstanding.
+Read [the repository working manuscript](manuscript/WORKING_MANUSCRIPT.md), including the abstract, methods, primary results table, sensitivity analysis, limitations, and author-confirmation items. The author has confirmed [affiliation, correspondence, funding, competing interests, and AI-use declarations](docs/FINAL_AUTHOR_DECLARATIONS_2026-10-17.md). This remains a working manuscript requiring final bibliography/figure review and journal-specific formatting; the Zenodo release is already published.
