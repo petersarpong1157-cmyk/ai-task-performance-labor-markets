@@ -1,13 +1,21 @@
-# R code status
+# R code and reproducibility
 
-The supplied `AI TASK PERFORMANCE.R` is a **21,627-line historical research-session script** with repeated phase blocks, multiple redefinitions of `root` using machine-specific Windows paths, and interim diagnostic/scoring code. It has not been committed wholesale as a reproducible script or run end-to-end.
+## Runnable candidate: processed-output reconstruction
 
-The `phase18_public_validation.R` script in this directory is a **new portable, minimal consistency check**, not a replacement for or a complete reconstruction of the historical workflow.
+`R/reproduce_descriptive_results.R` reads five exact uploaded CSVs now stored under `data/processed/`, checks primary employment and wage changes for 10 occupations, geographic sensitivity directions and fixed-2021 wage weights, and writes a derived results CSV.
 
-## How to run the portable check
-1. Install packages `readr` and `dplyr`.
-2. Supply the researcher's exact `phase17y_consolidated_results.csv` and `phase17j_combined_total.csv` files (not yet published here).
-3. From R: `source("R/phase18_public_validation.R")`. Select the two files when prompted.
-4. The script verifies expected rows and reported directional counts without altering either file.
+Run from repository root:
 
-For complete public reproducibility, extract and review individual source-reconciliation, sample-selection, wage-aggregation, and sensitivity phases, remove absolute paths, freeze dependencies, document BLS/O*NET download versions, and test a clean environment.
+```bash
+Rscript R/reproduce_descriptive_results.R
+```
+
+**Dependencies:** Base R. Calculation agreement was also checked independently from uploaded CSV values, but the R script has not yet been run by this environment.
+
+## Historical R analysis source
+
+The separately uploaded `AI TASK PERFORMANCE.R` is an approximately 21,627-line historical research-session script with multiple phases and Windows absolute paths. It is **not** committed or claimed to be a clean pipeline.
+
+Remaining work before source-to-output reproducibility: extract only final source processing and audit phases, refactor paths, document exact R packages and versions, supply raw source retrieval instructions and verify full pipeline in clean R.
+
+No code in this repository estimates causal AI effects or a validated full-task AI exposure index.
