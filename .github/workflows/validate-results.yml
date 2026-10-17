@@ -2,12 +2,12 @@ name: Validate occupational results (R)
 on:
   push:
     paths:
-      - 'R/reproduce_descriptive_results.R'
+      - 'R/**'
       - 'data/processed/**'
       - '.github/workflows/validate-results.yml'
   pull_request:
     paths:
-      - 'R/reproduce_descriptive_results.R'
+      - 'R/**'
       - 'data/processed/**'
       - '.github/workflows/validate-results.yml'
   workflow_dispatch:
@@ -23,6 +23,8 @@ jobs:
         with:
           r-version: 'release'
           use-public-rspm: false
+      - name: Validate source archive helpers
+        run: Rscript R/test_source_archive_helpers.R
       - name: Reproduce processed-data results
         run: Rscript R/reproduce_descriptive_results.R
       - name: Show output
