@@ -1,0 +1,12 @@
+{
+  "title": "AI Task Performance and Occupational Labor Markets: Descriptive Reproducibility Materials",
+  "upload_type": "software",
+  "creators": [
+    {"name": "Sarpong, Peter", "orcid": "0009-0000-0871-8285"}
+  ],
+  "description": "Working reproducibility materials for saved synthetic task benchmark audits, candidate O*NET partial-activity task links and descriptive 2021-2025 BLS OEWS metropolitan employment and CPI-U-adjusted wage comparisons. Original raw BLS R source execution and full occupational task validation remain incomplete. No causal AI effect is estimated.",
+  "keywords": ["OEWS", "O*NET", "occupational employment", "real wages", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets", "relation": "isSupplementTo", "resource_type": "software"}
+  ]
+}
