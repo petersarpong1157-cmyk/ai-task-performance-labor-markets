@@ -48,3 +48,21 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+
+# Large original source archives (download from official publishers)
+oesm??all.zip
+db_31_0_excel.zip
+data/raw/
+
+# Restricted/private benchmark reference material
+**/private_reference*/
+**/private_references/
+**/reference_answers/
+**/independent_reviews/
+**/*_private_reference.csv
+**/first_attempt_transcripts_private/
+
+# Local research environment and generated outputs
+results/reproduced/
+*.Rproj.user
