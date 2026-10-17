@@ -41,7 +41,7 @@ Rscript R/create_primary_figures.R
 
 The preceding commands were successfully executed in GitHub Actions; [successful run](https://github.com/petersarpong1157-cmyk/ai-task-performance-labor-markets/actions/runs/39034621104). Download its `occupational-reconstruction` artifact for a generated CSV, SVG, and PDF. Generated files are **workflow artifacts** rather than automatically committed files under `figures/generated/`.
 
-Raw source checks are additional manual steps and **not yet verified by this automated workflow**:
+Raw source scripts are **not executed by this automated workflow**. The BLS source script separately passed the author's local RStudio run (50/50 comparisons); the O*NET original workbook was independently inspected from within the research workflow using Python:
 
 ```sh
 Rscript R/reconcile_raw_oews.R "/path/to/BLS/zips"
@@ -62,7 +62,9 @@ Rscript R/verify_onet_task_sources.R "/path/to/db_31_0_excel.zip"
 - [x] Commit exact processed primary inputs and portable reconstruction R code.
 - [x] Run automated processed-data calculation and publication figure generation successfully.
 - [x] Preserve source-audit qualifications and candidate task-link boundaries.
-- [ ] Execute raw BLS and O*NET comparison scripts against original ZIPs and archive transparent logs.
+- [x] Researcher executed raw BLS reconciliation against all five original OEWS archives; [50-row result](../results/raw_bls_reconciliation.csv) matched 50/50 employment and 50/50 wages.
+- [x] Three original O*NET task statements checked directly against archived O*NET 31.0 workbook (using Python); [details](ONET_DIRECT_SOURCE_VERIFICATION.md).
+- [ ] Separate clean-environment execution of the O*NET R verifier and independent third-party replication, if claimed.
 - [ ] Review all generated figure layouts visually and apply journal production sizing.
 - [ ] Link a final manuscript document, independently checked citations, author declarations, and all exact source data/provenance files.
 - [ ] Obtain separate real expert review if claiming task-level validation.
